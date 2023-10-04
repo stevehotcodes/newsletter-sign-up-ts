@@ -95,6 +95,13 @@ form{
     align-items:center;
 }
 
+#subscribe-btn{
+    padding:1em;
+    background-color:var(--Dark-Slate-Grey);
+    color:var(--White);
+    border-radius:16px;
+
+}
 .sign-up-wrapper{
     display:flex;
     background-color: var(--White);
