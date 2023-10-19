@@ -20,7 +20,7 @@ window.addEventListener('load',()=>{
         setTimeout(() => {
             successMessage_el.style.display='none'
         }, 3000);
-        // return;
+        
     }
         
         email_input.value="";

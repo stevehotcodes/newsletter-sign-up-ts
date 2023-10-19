@@ -123,10 +123,10 @@ form{
 
 .illustration{
     background:url('./assets/images/illustration-sign-up-desktop.svg') center/cover;
-    /* background-position: center; */
+   
     flex: 0.4;
     height:95%;
-    /* border:2px solid red; */
+   
     margin:10px;
     border-radius:12px;
     
@@ -146,8 +146,6 @@ form{
     position: relative;
     top:-30rem;
     gap:1rem;
-    
-
     
 }
 
