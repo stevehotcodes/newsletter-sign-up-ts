@@ -22,6 +22,7 @@ class Form{
         this.form.addEventListener('submit', (e:Event)=>{
             e.preventDefault();
             console.log('clicked');
+            if (this.emailInput.value!=="e")
 
         if(this.emailInput.value!==" "){
             this.successMessageElement.style.display='block';
