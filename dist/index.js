@@ -9,16 +9,30 @@ class Form {
             this.successMessageElement = successMessageElement;
         this.form = document.querySelector("#subscribe-form");
         this.button = button;
+        this.errorMessage = "Invalid Email Syntax";
     }
     handleFormSubmit() {
         this.form.addEventListener('submit', (e) => {
             e.preventDefault();
-            console.log('clicked');
+            // console.log('clicked');
+            //validating the email input
+            // (()=>{
+            //     const regex=/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            //     if(this.emailInput.value){
+            //         if(!regex.test(this.emailInput.value)){
+            //           this.emailInput.style.backgroundColor="hsl(4, 100%, 67%);"  
+            //           this.emailInput.style.border="2px solid hsl(4, 100%, 67%);" 
+            //         }
+            //     }
+            // }) ()
+            // if (this.emailInput.value!==" ")
             if (this.emailInput.value !== " ") {
+                signUpWrapper_el.style.filter = "blur(5px)";
                 this.successMessageElement.style.display = 'block';
                 console.log(this.emailInput.value);
                 setTimeout(() => {
                     this.successMessageElement.style.display = "none";
+                    signUpWrapper_el.style.filter = "none";
                 }, 3000);
             }
             this.emailInput.value = " ";
@@ -27,6 +41,8 @@ class Form {
     dismissEvent(button) {
         this.button.addEventListener('click', (e) => {
             this.successMessageElement.style.display = 'none';
+            signUpWrapper_el.style.filter = "none";
+            location.reload();
         });
     }
 }
