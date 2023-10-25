@@ -1,6 +1,6 @@
 window.addEventListener('load',()=>{
     const signupWrapper_el=document.querySelector(".sign-up-wrapper");
-    
+    const errorMsg=document.querySelector(".error-msg")
     const successMessage_el=document.querySelector("#success-message");
     const form= document.querySelector("#subscribe-form")
     // successMessage_el.style.display='none';
@@ -14,8 +14,20 @@ window.addEventListener('load',()=>{
     form.addEventListener('submit',(e)=>{
         e.preventDefault();
         console.log('çlicked');
-    if(email_input.value!=""){
+    if(email_input.value===""){
+      
+        errorMsg.style.opacity="1"
+        email_input.style.border="2px solid hsl(4, 100%, 67%)"
+        email_input.style.backgroundColor="hsl(4, 100%, 67%)"
+        setTimeout(()=>{
+            location.reload()
+        },500)
+        
+        return 
+    }    
+    if(email_input.value!==""){
         successMessage_el.style.display='block'; 
+        
         console.log(email_input.value)
         setTimeout(() => {
             successMessage_el.style.display='none'
